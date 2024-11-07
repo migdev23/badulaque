@@ -1,0 +1,9 @@
+footer{
+    display: grid;
+    align-items: center;
+    background-color: var(--colorTerciario);
+    color: var(--colorPrincipal);
+    width: 100%;
+    text-align: center;
+}
+

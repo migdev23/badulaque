@@ -1,0 +1,26 @@
+button{
+    padding: 10px;
+    border: none;
+    background: var(--colorBotonesFondoDefecto);
+    color: white;
+}
+
+.bottonRedondeado{
+    border-radius: 51%;
+}
+
+.bottonPocoRedondeado{
+    border-radius: 20px;
+}
+
+.bottonSombreado{
+    box-shadow:0px 0px 10px var(--colorBotonesSombraDefecto);
+}
+
+
+
+
+
+
+
+

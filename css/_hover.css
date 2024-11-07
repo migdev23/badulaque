@@ -1,0 +1,22 @@
+
+.hoverOscurecer{transition: background-color 400ms;}
+.hoverOscurecer:hover{
+    background-color: var(--colorHoverOscurecido);
+    color: white;
+}
+
+.hoverOscurecerHijos{transition: background-color 400ms;}
+.hoverOscurecerHijos:hover{
+    background-color: var(--colorHoverOscurecido);
+    color: white;
+}
+
+.hoverOscurecerHijos:hover > *{
+    color: white;
+}
+
+.hoverBlanquedao{transition: background-color 400ms;}
+.hoverBlanquedao:hover{
+    background-color: var(--colorHoverBlanqueado);
+    color:black;
+}

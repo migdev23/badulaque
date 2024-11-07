@@ -1,0 +1,208 @@
+nav{
+    background: var(--colorTerciario);
+}
+
+nav *{
+    color: var(--colorGeneralLetra);
+}
+
+nav ul li ul{
+    background: transparent;
+}
+
+nav ul li ul li{
+    background: var(--colorPrincipal);
+}
+
+nav ul li ul li:hover{
+    background: var(--colorCuaternario);
+}
+
+body nav ul li:hover{
+    background: var(--colorCuaternario);
+}
+
+body nav ul li ul li{
+    border-bottom: 2px solid var(--colorTerciario);
+}
+
+nav ul li ul li:last-child {
+    border-bottom: none;
+}
+body.simple--navVertical nav ul li{
+    border-bottom: 2px solid var(--colorSecundario);
+}
+
+body.simple--navVertical nav ul li:last-child {
+    border-bottom: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+nav ul li {
+    position: relative;
+    cursor: pointer;
+    list-style: none;
+    z-index: 3;
+}
+
+nav ul li ul {
+    max-height: 0vh;
+    max-width: 0%;
+    overflow: hidden;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+}
+
+nav ul li:hover ul {
+    max-height: 100vh;
+    max-width: 100%;
+}
+
+
+body nav ul li:hover ul > li:first-child::before {
+    /*circunflejo css al hacer hover*/
+    color: var(--colorPrincipal); 
+    display: block;
+    position: absolute;
+}
+
+
+
+/*Nav Vertical tiene el submenu dos tipos despliegue, el despligue defecto y el despliegue flotado que al lado que se despliega depende de la posicion del nav*/ 
+body.simple--navVertical nav ul li:hover ul {
+    position: relative;
+    margin: 0.7em 0px;
+    margin-bottom: 0em;
+    transition: max-height 400ms ease;
+}
+
+
+body.simple--navVertical nav.despligueFlotado ul li:hover ul{
+    position: absolute;
+    top: 0%;
+    margin:0px;
+    transition: left 400ms ease;
+}
+
+
+body.simple--navVertical nav.despligueFlotado ul li ul {left: 90%;}
+body.simple--navVertical nav.despligueFlotado ul li:hover ul { /*Por defecto esta en la izquierda el nav vertical asi que por defecto el menu se despliega hacia la derecha*/
+    left: 100%;
+}
+
+body.simple--navVertical.--navVertical--derecha nav.despligueFlotado ul li ul {left: -90%;}
+body.simple--navVertical.--navVertical--derecha nav.despligueFlotado ul li:hover ul { /*Menu derecha submenu izquierda*/
+    left: -100%;
+}
+
+/*CIRCUNFLEJO MENU IZQUIERDA*/
+body.simple--navVertical nav.despligueFlotado ul li:hover ul > li{
+    margin-left: 2.55em;
+}
+body.simple--navVertical nav.despligueFlotado ul li:hover ul > li:first-child::before {
+    /*circunflejo css al hacer hover*/
+    font-size: 60px;
+    content: "\25C0";
+    top: -.30em;
+    left: -.75em;
+}
+
+
+
+/*CIRCUNFLEJO MENU DERECHA*/
+body.simple--navVertical.--navVertical--derecha nav.despligueFlotado ul li:hover ul > li{
+    margin-right: 2.55em;
+}
+
+body.simple--navVertical.--navVertical--derecha nav.despligueFlotado ul li:hover ul > li:first-child::before{
+    font-size: 61px;
+    content: "\25B6";
+    top: -.30em;
+    left:97%;
+}
+
+body.simple--navVertical nav ul li {
+    padding: 1em 0em;
+    text-indent: 1em; /*Mover el texto hacia la derecha*/
+}
+
+body.simple--navVertical nav.despligueFlotado  ul > li {
+    padding: 1em 1em;
+    text-indent: 0em;
+}
+
+
+body.simple--navVertical nav ul li:hover ul li {
+    padding-bottom: 1em;
+}
+
+body.simple--navVertical nav.navVertical--centrado > ul {
+    text-align: center;
+}
+
+body.simple--navVertical nav.navVertical--izquierda>ul {
+    text-align: left;
+}
+
+body.simple--navVertical nav.navVertical--derecha>ul {
+    text-align: right;
+} 
+
+
+
+/*NAV HORIZONTAL*/
+
+body.simple--navHorizontal nav ul li:hover ul > li:first-child{
+    margin-top: 1em;
+}
+
+body.simple--navHorizontal nav ul li:hover ul > li:first-child::before {
+    /*circunflejo css al hacer hover*/
+    font-size: 22px; 
+    content: "\25B2"; 
+    position: absolute;
+    top: -1em;
+    left: -3px;
+}
+
+body.simple--navHorizontal nav > ul li:hover ul{
+    transition: max-height 3s ease;
+}
+
+body.simple--navHorizontal nav {
+    display: grid;
+    align-items: center;
+}
+
+body.simple--navHorizontal nav > ul {
+    display: grid;
+    align-content: center;
+    grid-auto-flow: column;
+    list-style: none;
+    padding: 0.2em;
+    justify-content: center;
+}
+
+body.simple--navHorizontal nav > ul li {
+    max-width: 15em;
+    min-width: 10em;
+    padding: 1em;
+}
+
+
+
+body.simple--navHorizontal nav.navHorizontal--centrado>ul {
+    justify-content: center;
+}
+
+body.simple--navHorizontal nav.navHorizontal--izquierda>ul {
+    justify-content: left;
+}
+
+body.simple--navHorizontal nav.navHorizontal--derecha>ul {
+    justify-content: right;
+}

@@ -1,0 +1,79 @@
+body {
+  font: var(--fuenteGeneral);
+  max-width: 1400px;
+  margin: 0px auto;
+  min-height: 100vh;
+  display: grid;
+}
+
+header {
+  grid-area: cabecera;
+}
+
+nav {
+  grid-area: navegacion;
+  background: var(--colorTerciario);
+}
+
+main {
+  grid-area: principal;
+}
+
+footer {
+  grid-area: pie;
+}
+
+aside{
+  grid-area: lateral;
+}
+
+
+/*NAV HORIZONTAL*/
+body.simple.simple--navHorizontal {
+  grid-template-areas:
+    "cabecera"
+    "navegacion"
+    "principal"
+    "pie";
+    grid-template-rows: 7em 4em auto 6em;
+}
+
+
+
+/*NAV VERTICAL*/
+body.simple.simple--navVertical {
+    grid-template-areas:
+    "cabecera cabecera cabecera cabecera"
+    "navegacion principal principal principal"
+    "pie pie pie pie";
+    grid-template-rows: 7em auto 6em;
+    grid-template-columns: 20% auto auto auto;
+}
+
+body.simple.simple--navVertical.--navVertical--derecha {
+  grid-template-areas:
+  "cabecera cabecera cabecera cabecera"
+  "principal principal principal navegacion"
+  "pie pie pie pie";
+  grid-template-columns: auto auto auto 20%;
+}
+
+
+/*NAV HORIZONTAL CON ASIDE*/
+body.simple.simple--navHorizontal.simple--aside{
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "navegacion navegacion navegacion"
+    "lateral principal principal"
+    "pie pie pie";
+    grid-template-columns: 20% auto auto;
+}
+
+body.simple.simple--navHorizontal.simple--aside--derecha{
+  grid-template-areas:
+    "cabecera cabecera cabecera"
+    "navegacion navegacion navegacion"
+    "principal principal lateral"
+    "pie pie pie";
+    grid-template-columns: auto auto 20%;
+}

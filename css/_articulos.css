@@ -1,0 +1,59 @@
+article p{
+   grid-area: cuerpoArt;
+}
+
+article header{
+    grid-area: cabeceraArt;
+ }
+
+article img{
+    grid-area: imagen;
+    box-shadow: 0.5em 0.5em 1em;
+    width: 80%;
+}
+
+article{
+    display: grid;
+    grid-template-areas: 'cabeceraArt imagen'
+                         'cuerpoArt imagen';
+    grid-template-rows: 10% 90%;
+    grid-template-columns: 70% 30%;
+    
+}
+
+article.img__derecha{
+    display: grid;
+    grid-template-areas: 'cuerpoArt imagen'
+                         'cuerpoArt imagen';
+}
+
+article.img__izquierda{
+    display: grid;
+    grid-template-areas: 'imagen cabeceraArt'
+                         'imagen cuerpoArt';
+}
+
+
+article header.centrado{
+    text-align: center;
+}
+
+article header.izquierda{
+    text-align: left;
+}
+
+article header.derecha{
+    text-align: right;
+}
+
+article p.centrado{
+    text-align: center;
+}
+
+article p.izquierda{
+    text-align: left;
+}
+
+article p.derecha{
+    text-align: right;
+}
