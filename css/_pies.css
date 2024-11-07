@@ -5,5 +5,10 @@ footer{
     color: var(--colorPrincipal);
     width: 100%;
     text-align: center;
+    height: auto;
 }
 
+footer a{
+    color: var(--colorPrincipal);
+    text-decoration: none;
+}

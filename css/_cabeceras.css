@@ -2,6 +2,10 @@ header{
     background-color: var(--colorPrincipal);
 }
 
+header h1{
+    color: var(--colorGeneralLetra);
+}
+
 /*Definiones para cabecera sin logo*/
 
 header.sinLogo{
@@ -11,7 +15,7 @@ header.sinLogo{
 
 header.sinLogo h1{
     text-align: center;
-    color: white;
+    color: var(--colorGeneralLetra);
     font: 16pt Impact;
 }
 
@@ -39,6 +43,7 @@ header.conLogo img {
 
 header.conLogo h1 {
     font-size: 1.5em;
+    color: var(--colorGeneralLetra);
     grid-area: titulo;
 }
 
