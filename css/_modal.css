@@ -1,17 +1,47 @@
 
 .modal {
-    display: none;
-    position: fixed; 
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: white;
-    padding: 20px;
-    border: 2px solid #000;
-    width: 200px;
-    text-align: center;
+    
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    display: none; 
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s
 }
 
 .modal:target {
     display: block;
 }
+
+.modal div {
+    transform: scale(0);
+}
+.modal:target div{
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--colorGeneralLetra);
+    padding: 20px;
+    border: 2px solid var(--colorPrincipal);
+    border-radius: 1em;
+    text-align: center;
+    min-width: 30em;
+    min-height: 20em;
+}
+
+.modal a.cerrar{
+    color: var(--colorPrincipal);
+    position: absolute;
+    right: 2em;
+    top: 1em;
+    text-decoration: none;
+}
+.modal a.cerrar:hover{
+    transform: scale(1.5);
+    transition: transform 0.3s ;
+}
+

@@ -6,6 +6,68 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/artiframe.css" />
+    <style>
+    .encargos {
+        width: 100%;
+        height: 100vh;
+        background-color: #f0f0f0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contenedor2 {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    }
+    .make{
+        position: absolute;
+        border: 1 solid black;
+        flex: auto  ;
+    }
+    .producto {
+    width: 30%;
+    background-color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .producto img {
+    width: 100%;
+    height: auto;
+    }
+
+    .producto h2 {
+    margin: 10px 0;
+    font-size: 18px;
+    }
+
+    .producto p {
+    font-size: 16px;
+    color: #666;
+    }
+
+    .expose {
+        width: 100%;
+        height: 50%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .expose img {
+        width: 90%;
+        height: auto;
+    }
+    </style>
 </head>
 
 <body class="simple simple--navVertical simple__main--filas --navVertical--derecha">
@@ -22,8 +84,110 @@
         </ul>
     </nav>
     <main>
-        <section>
-            <!-- Contenido -->
+        <section class="encargos">
+            <div class="contenedor2">
+                <div class="producto">
+                    <h2>Cucurucho 1</h2>
+                    <a href="#modal"><img src="./img/cucu1.jpg" alt="Imagen del Producto 1"></a>
+                    <p>$10.00</p>
+                </div>
+                <div class="producto">
+                    <h2>Cucurucho 2</h2>
+                    <a href="#modal2"><img src="./img/cucu2.jpg" alt="Imagen del Producto 2"></a>
+                    <p>$20.00</p>
+                </div>
+                <div class="producto">
+                    <h2>Cucurucho 3</h2>
+                    <a href="#modal3"><img src="./img/cucu3.jpg" alt="Imagen del Producto 3"></a>
+                    <p>$30.00</p>
+                </div>
+            </div>
+            <div class="expose">
+                <a href="#modalchicle"><img src="./img/chicle.jpg" alt="Imagen 1"></a>
+                <a href="#modalkinder"><img src="./img/kinder.jpg" alt="Imagen 2"></a>
+                <a href="#modalFerrero"><img src="./img/ferrero.jpg" alt="Imagen 3"></a>
+                <a href="#modalFresa"><img src="./img/fresa.jpg" alt="Imagen 4"></a>
+                <a href="#modalmoneda"><img src="./img/moneda.jpg" alt="Imagen 5"></a>
+            </div>
+
+            <div id="modalchicle" class="modal">
+                <div class="modal-content">
+                    <h2>Chicles</h2>
+                    <p>Esto añadira Chicles a tu cucurucho a diseñar</p>
+                    <a href="#close">Añadir</a>
+                </div>
+            </div>
+            <div id="modalkinder" class="modal">
+                <div class="modal-content">
+                    <h2>Kinder Bueno</h2>
+                    <p>Esto añadira Kinder bueno a tu cucurucho a diseñar</p>
+                    <a href="#close">Añadir</a>
+                </div>
+            </div>
+            <div id="modalFerrero" class="modal">
+                <div class="modal-content">
+                    <h2>Ferrero rocher</h2>
+                    <p>Esto añadira ferrero rocher a tu cucurucho a diseñar</p>
+                    <a href="#close">Añadir</a>
+                </div>
+            </div>
+            <div id="modalFresa" class="modal">
+                <div class="modal-content">
+                    <h2>Fresas de gominola</h2>
+                    <p>Esto añadira Fresas de gominola a tu cucurucho a diseñar</p>
+                    <a href="#close">Añadir</a>
+                </div>
+            </div>
+            <div id="modalmoneda" class="modal">
+                <div class="modal-content">
+                    <h2>Moneda de chocolate</h2>
+                    <p>Esto añadira Moneda de chocolate a tu cucurucho a diseñar</p>
+                    <a href="#close">Añadir</a>
+                </div>
+            </div>
+
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <h2>1º Cucurucho</h2>
+                    <p>Este cucurucho se basa en: <br><br>
+                        1. 10 unidades de chicles   <br><br>
+                        2. 1 bolsa de gusanitos<br><br>
+                        3. 5 Fresas de gominola<br><br>
+                    </p>
+                    <button>Comprar</button>
+                    <a href="#close">Cerrar</a>
+                </div>
+            </div>
+        
+            <div id="modal2" class="modal">
+                <div class="modal-content">
+                    <h2>2º Cucurucho</h2>
+                    <p>Este cucuruchoo se basa en: <br><br>
+                        1. 15 unidades de chicles <br><br>
+                        2. 2 Bolsas de gusanitos <br><br>
+                        3. 1 Bolsa de doritos  <br><br>
+                        4. 10 Mondas de chocolate  <br><br>
+                    </p>
+                    <button>Comprar</button>
+                    <a href="#close">Cerrar</a>
+                </div>
+            </div>
+        
+            <div id="modal3" class="modal">
+                <div class="modal-content">
+                    <h2>3º Cucurucho</h2>
+                    <p>este cucurucho se basa en: <br><br>
+                        1. 20 Chicles  <br><br>
+                        2. 1 Bote de pringles  <br><br>
+                        3. 5 bolsitas de lacasitos<br><br>
+                        4. 1 minipack con ferrero rocher<br><br>
+                        5  3 boslitas con bombones nestle<br><br>
+                    </p>
+                    <button>Comprar</button>
+                    <a href="#close">Cerrar</a>
+                </div>
+            </div>
         </section>
     </main>
 

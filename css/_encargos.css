@@ -1,0 +1,60 @@
+.encargos {
+    width: 100%;
+    height: 100vh;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contenedor2 {
+width: 100%;
+height: 30%;
+display: flex;
+justify-content: space-around;
+align-items: center;
+padding: 10px;
+box-sizing: border-box;
+}
+.make{
+    position: absolute;
+    border: 1 solid black;
+    flex: auto  ;
+}
+.producto {
+width: 30%;
+background-color: #ffffff;
+text-align: center;
+padding: 10px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.producto img {
+width: 100%;
+height: auto;
+}
+
+.producto h2 {
+margin: 10px 0;
+font-size: 18px;
+}
+
+.producto p {
+font-size: 16px;
+color: #666;
+}
+
+.expose {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.expose img {
+    width: 90%;
+    height: auto;
+}

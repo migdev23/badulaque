@@ -23,7 +23,39 @@
     </nav>
     <main>
         <section>
-            <!-- Contenido -->
+            <div class="form-container">
+                <h2>Registro</h2>
+                <form action="#" method="post">
+                    <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" id="cantidad" name="cantidad" required>
+
+        <label for="chuche">Chuches:</label>
+        <select id="chuche" name="chuche">
+            <option value="gominolas">Gominolas</option>
+            <option value="chicles">Chicles</option>
+            <option value="caramelos">Caramelos</option>
+            <option value="caramelos">Ladrillos</option>
+            <option value="caramelos">Fresitas</option>
+            <option value="caramelos">Moras</option>
+            <option value="caramelos">Ferrero</option>
+            <option value="caramelos">Kinder</option>
+            <option value="caramelos">bombones</option>
+        </select>
+        <label for="modal-trigger" class="submit-button"><a href="#modal">Enviar Pedido</a></label>
+                </form>
+            </div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <label for="modal-trigger" class="close">&times;</label>
+                    <h2>Resumen del Pedido</h2>
+                    <p>Su pedido a sido correctamente recibido</p>
+                    <p>y se procesara para el envio.</p>
+                    <a href="#close">Cerrar</a>
+                </div>
         </section>
     </main>
 
