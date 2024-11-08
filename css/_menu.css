@@ -10,6 +10,12 @@ nav ul li ul{
     background: transparent;
 }
 
+nav ul li a{
+    display: block;
+    width: 100%;
+}
+
+
 nav ul li ul li{
     background: var(--colorPrincipal);
 }

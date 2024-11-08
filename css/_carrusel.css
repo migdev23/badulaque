@@ -1,7 +1,7 @@
 .carrusel {
     overflow: hidden;
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     position: relative;
 }
 
@@ -10,12 +10,12 @@
     position: absolute;
     animation: pasarela 10s infinite;
     animation-timing-function: steps(var(--numeroImagenes));
-    width: calc(400px * var(--numeroImagenes));
+    width: calc(300px * var(--numeroImagenes));
 }
 
 .carrusel div img {
-    width: 400px;
-    height: 400px;
+    width: 300px;
+    height: 300px;
     animation: slide calc(10s / var(--numeroImagenes)) ease-in-out infinite forwards;
     opacity: 0; 
 }
@@ -25,7 +25,7 @@
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-400px * var(--numeroImagenes)));
+        transform: translateX(calc(-300px * var(--numeroImagenes)));
     }
 }
 
