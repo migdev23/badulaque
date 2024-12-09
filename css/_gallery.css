@@ -102,3 +102,64 @@
 .gallery a:nth-child(9) {
     animation-delay: 1.8s;
 }
+
+
+
+
+/* .container {
+    overflow-x: auto; 
+    overflow-y: hidden; 
+    display: flex;
+    flex-direction: row; 
+    gap: 10px;
+    scroll-behavior: smooth;
+}
+
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+.gallery a {
+    flex: 1 0 calc(100% / 3 - 10px);
+    max-width: calc(100% / 3 - 10px);
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+
+.lineas-1 {
+    height: calc(33.33vw); 
+}
+
+.lineas-2 {
+    height: calc(66.66vw);
+}
+
+.lineas-3 {
+    height: calc(100vw);
+}
+
+/* Animación */
+/* .gallery.animada a {
+    animation: entrada 1s forwards;
+    opacity: 0;
+}
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+} */

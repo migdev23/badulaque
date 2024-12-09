@@ -6,6 +6,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link rel="stylesheet" href="./css/artiframe.css" />
+    <style>
+            button {
+    background-color: #e100ff; 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #8a06a5; 
+    transform: scale(1.05); 
+}
+
+button:active {
+    background-color: #600074; 
+    transform: scale(0.95); 
+}
+    </style>
 </head>
 
 <body class="simple simple--navVertical simple__main--filas --navVertical--derecha">
@@ -25,37 +47,38 @@
         <section>
             <div class="form-container">
                 <h2>Registro</h2>
-                <form action="#" method="post">
+                <form id="pedidoForm">
                     <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" name="nombre" required>
+                    <input type="text" id="nombre" name="nombre" required>
 
-        <label for="cantidad">Cantidad:</label>
-        <input type="number" id="cantidad" name="cantidad" required>
+                    <label for="cantidad">Cantidad:</label>
+                    <input type="number" id="cantidad" name="cantidad" required>
 
-        <label for="chuche">Chuches:</label>
-        <select id="chuche" name="chuche">
-            <option value="gominolas">Gominolas</option>
-            <option value="chicles">Chicles</option>
-            <option value="caramelos">Caramelos</option>
-            <option value="caramelos">Ladrillos</option>
-            <option value="caramelos">Fresitas</option>
-            <option value="caramelos">Moras</option>
-            <option value="caramelos">Ferrero</option>
-            <option value="caramelos">Kinder</option>
-            <option value="caramelos">bombones</option>
-        </select>
-        <label for="modal-trigger" class="submit-button"><a href="#modal">Enviar Pedido</a></label>
+                    <label for="chuche">Chuches:</label>
+                    <select id="chuche" name="chuche">
+                        <option value="gominolas">Gominolas</option>
+                        <option value="chicles">Chicles</option>
+                        <option value="caramelos">Caramelos</option>
+                        <option value="ladrillos">Ladrillos</option>
+                        <option value="fresitas">Fresitas</option>
+                        <option value="moras">Moras</option>
+                        <option value="ferrero">Ferrero</option>
+                        <option value="kinder">Kinder</option>
+                        <option value="bombones">Bombones</option>
+                    </select>
+
+                    <a href="#modal"><button type="button" id="submitButton">Enviar Pedido</button></a>
                 </form>
             </div>
 
+            <div class="modal-overlay" id="modalOverlay"></div>
             <div id="modal" class="modal">
                 <div class="modal-content">
-                    <label for="modal-trigger" class="close">&times;</label>
                     <h2>Resumen del Pedido</h2>
-                    <p>Su pedido a sido correctamente recibido</p>
-                    <p>y se procesara para el envio.</p>
-                    <a href="#close">Cerrar</a>
+                    <p id="resumen"></p>
+                    <a href="#" class="cerrar" id="cerrarModal">X</a>
                 </div>
+            </div>
         </section>
     </main>
 
@@ -69,6 +92,37 @@
             <span><a href="">Twitter</a></span>
         </div>
     </footer>
+    <script>
+        const form = document.getElementById('pedidoForm');
+        const modal = document.getElementById('modal');
+        const overlay = document.getElementById('modalOverlay');
+        const resumen = document.getElementById('resumen');
+        const cerrarModal = document.getElementById('cerrarModal');
+        const submitButton = document.getElementById('submitButton');
+
+        submitButton.addEventListener('click', () => {
+            const nombre = form.nombre.value;
+            const cantidad = form.cantidad.value;
+            const chuche = form.chuche.value;
+
+            resumen.innerHTML = `
+                <br>
+                <p><strong>Nombre:</strong> ${nombre}</p>
+                <br>
+                <p><strong>Cantidad:</strong> ${cantidad}</p>
+                <br>
+                <p><strong>Chuches:</strong> ${chuche}</p>
+            `;
+
+            modal.classList.add('active');
+            overlay.classList.add('active');
+        });
+
+        overlay.addEventListener('click', () => {
+            modal.classList.remove('active');
+            overlay.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
